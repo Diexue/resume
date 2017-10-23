@@ -18,7 +18,6 @@ $(function() {
 
 
 function fadeIn($element, direction) {
-    console.log('kk', $element, direction)
     var length = $($element).length + 1;
     for (let i = 0; i <= length; i++) {
         $($element + ':nth-of-type(' + i + ')').css({

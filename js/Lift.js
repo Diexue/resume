@@ -10,19 +10,18 @@
 
     function Selected(index) {
         if (index == 3) {
-
             if (isFirst) {
                 // for (var a in $numSet) {
                 //     if (typeof $numSet[a] == 'object' && $numSet[a].innerHTML != undefined) {
                 //         changeNum($numSet[a], parseInt($numSet[a].innerHTML))
                 //     }
                 // }
-                p1 = DrawProgress('h5', 'HTML5', 88, 10)
-                p2 = DrawProgress('c3', 'CSS3', 88, 10)
-                p3 = DrawProgress('jq', 'jQuery', 80, 10)
-                p4 = DrawProgress('js', 'javascript', 78, 10)
-                p5 = DrawProgress('boot', 'Bootstrap', 85, 10)
-                p6 = DrawProgress('ng2', 'Angular2.0', 65, 10)
+                p1 = DrawProgress('h5', 'HTML5', 88, 5)
+                p2 = DrawProgress('c3', 'CSS3', 88, 5)
+                p3 = DrawProgress('jq', 'jQuery', 80, 5)
+                p4 = DrawProgress('js', 'javascript', 78, 5)
+                p5 = DrawProgress('boot', 'Bootstrap', 85, 5)
+                p6 = DrawProgress('ng2', 'Angular2.0', 65, 5)
                 isFirst = false;
             }
         } else if (index == 2) {

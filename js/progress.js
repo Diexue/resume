@@ -9,12 +9,14 @@ Progress.prototype = {
 
         let cvsElement = document.getElementById(this.el), //获取元素
             ctx = cvsElement.getContext("2d"), //获取画笔
-            width = cvsElement.width, //元素宽度
-            height = cvsElement.height, //元素高度
+            // width = cvsElement.width, //元素宽度
+            // height = cvsElement.height, //元素高度
+            width = 120,
+            height = 120,
             degActive = 0, //动态线条
             timer = null; //定时器
-
-        //停止时的角度
+        console.log('h w', this.el, this.skill, width, height)
+            //停止时的角度
         init.deg > 0 && init.deg <= 100 ?
             this.deg = init.deg : this.deg = 100;
 
@@ -82,9 +84,11 @@ Progress.prototype = {
             if (degActive >= this.deg / 100 * 360) { //停止定时器
                 clearInterval(timer);
                 timer = null;
+                degActive = this.deg / 100 * 360
             }
             //degActive++;
-            degActive += 8;
+
+            degActive += (this.deg / this.timer);
         }.bind(this), this.timer);
     }
 };
