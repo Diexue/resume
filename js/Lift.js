@@ -10,12 +10,19 @@
 
     function Selected(index) {
         if (index == 3) {
+
             if (isFirst) {
-                for (var a in $numSet) {
-                    if (typeof $numSet[a] == 'object' && $numSet[a].innerHTML != undefined) {
-                        changeNum($numSet[a], parseInt($numSet[a].innerHTML))
-                    }
-                }
+                // for (var a in $numSet) {
+                //     if (typeof $numSet[a] == 'object' && $numSet[a].innerHTML != undefined) {
+                //         changeNum($numSet[a], parseInt($numSet[a].innerHTML))
+                //     }
+                // }
+                p1 = DrawProgress('h5', 'HTML5', 88, 10)
+                p2 = DrawProgress('c3', 'CSS3', 88, 10)
+                p3 = DrawProgress('jq', 'jQuery', 80, 10)
+                p4 = DrawProgress('js', 'javascript', 78, 10)
+                p5 = DrawProgress('boot', 'Bootstrap', 85, 10)
+                p6 = DrawProgress('ng2', 'Angular2.0', 65, 10)
                 isFirst = false;
             }
         } else if (index == 2) {
@@ -31,12 +38,6 @@
 
     function Check() {
         var wst = $(window).scrollTop();
-        // if (wst >= $(param.target[0]).offset().top - 100) {
-        //     $(param.control1).fadeIn(500);
-        // } else {
-        //     $(param.control1).fadeOut(500);
-        // }
-
         var key = 0;
         var flag = true;
         for (var i = 0; i < array.length; i++) {
@@ -49,7 +50,6 @@
                 } else {
                     flag = true;
                 }
-
             }
         }
         Selected(index);

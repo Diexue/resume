@@ -106,7 +106,7 @@ a {
     font-size: 30px;
     line-height: 30px;
     color: #2c3e50;
-    padding: 150px 0 0;
+    padding: 120px 0 0;
     letter-spacing: 2px;
     margin-bottom: 10px;
 }
@@ -280,7 +280,7 @@ experience {
     font-size: 16px;
 }
 
-#cas {
+#Mycanvas {
     position: absolute;
     z-index: -1;
     top: 0;
