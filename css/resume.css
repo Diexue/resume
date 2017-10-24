@@ -61,7 +61,7 @@ a {
 }
 
 .nav-ul li:hover {
-    background: rgba(239, 83, 80, .7);
+    background: rgba(239, 83, 80, .7)!important;
     /*background: #ef5350;*/
 }
 
@@ -471,7 +471,7 @@ span {
         width: 100%;
         padding-bottom: 1em;
         background: #2c3e50;
-        display: none;
+        display: block;
     }
     .mobile-nav li {
         width: 100%;
@@ -521,13 +521,13 @@ span {
 }
 
 @media only screen and (max-width: 1224px) {
-    /*.nav-ul.nav-xs-ul {
+    .nav-ul.nav-xs-ul {
         display: none;
-    }*/
-    .nav-ul {
+    }
+    /*.nav-ul {
         display: block;
         float: right;
-    }
+    }*/
 }
 
 @media screen and (max-width:600px) {

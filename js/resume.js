@@ -1,15 +1,15 @@
 $(function() {
     var $numSet = $('.num .gradeNum');
-    if ($(window).width() <= 755) {
-        $(".mobile-nav").hide();
-    }
+    // if ($(window).width() <= 755) {
+    //     $(".mobile-nav").hide();
+    // }
     $('.more-nav').on('click', function() {
-        $(".nav-ul.mobile-nav").stop().slideToggle(300);
+        $(".nav-ul.nav-xs-ul").stop().slideToggle(300);
     })
-    $('.mobile-nav li').click(function() {
-        if ($(window).width() <= 755) {
-            $(".mobile-nav").slideUp(300)
-        }
+    $('.nav-xs-ul li').click(function() {
+        // if ($(window).width() <= 755) {
+        $(".nav-xs-ul").slideUp(300)
+            // }
     })
     $(".fades").addClass("fadesin");
     fadeIn('.fadeDown', 'fadeInDown');
@@ -167,11 +167,14 @@ function changeNum(element, value) {
 }
 $(window).resize(function() {
     var wid = $(window).width();
-    if (wid > 755) {
-        console.log('wid', wid)
-        $(".nav-ul").show();
-    } else {
-        console.log('wid', wid)
-        $(".mobile-nav").hide();
+    if (wid > 768) {
+        $(".nav-xs-ul").hide();
     }
+    // if (wid > 755) {
+    //     console.log('wid', wid)
+    //     $(".nav-ul").show();
+    // } else {
+    //     console.log('wid', wid)
+    //     $(".mobile-nav").hide();
+    // }
 });
