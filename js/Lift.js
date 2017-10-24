@@ -47,6 +47,21 @@
         }, 1000);
     }
 
+    function DrawProgress(id, skill, deg, timer) {
+        new Progress({
+            el: id, //canvas元素id
+            deg: deg, //绘制角度
+            skill: skill, //文本内容
+            timer: timer, //绘制时间
+            lineWidth: 5, //线宽
+            lineBgColor: '#e2e2e2', //底圆颜色
+            lineColor: '#e4393c', //动态圆颜色
+            textColor: '#000', //文本颜色
+            fontSize: 20, //字体大小
+            circleRadius: 100 //圆半径
+        });
+    }
+
     function Check() {
         var wst = $(window).scrollTop();
         var key = 0;

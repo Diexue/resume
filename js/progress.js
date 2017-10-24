@@ -1,4 +1,4 @@
-let Progress = function(init) {
+var Progress = function(init) {
     this.init(init)
 };
 Progress.prototype = {
@@ -7,7 +7,7 @@ Progress.prototype = {
         this.el = init.el; //元素ID
         this.skill = init.skill;
 
-        let cvsElement = document.getElementById(this.el), //获取元素
+        var cvsElement = document.getElementById(this.el), //获取元素
             ctx = cvsElement.getContext("2d"), //获取画笔
             // width = cvsElement.width, //元素宽度
             // height = cvsElement.height, //元素高度
@@ -73,11 +73,11 @@ Progress.prototype = {
             ctx.arc(width / 2, height / 2, this.circleRadius, -Math.PI / 2, degActive * Math.PI / 180 - Math.PI / 2);
             ctx.strokeStyle = this.lineColor;
             ctx.stroke();
-            let txt = (parseInt(degActive * 100 / 360) + "%"); //获取百分比
+            var txt = (parseInt(degActive * 100 / 360) + "%"); //获取百分比
             ctx.font = this.fontSize + "px SimHei";
-            let w = ctx.measureText(txt).width; //获取文本宽度
-            let h = this.fontSize / 2;
-            let w2 = ctx.measureText(this.skill).width;
+            var w = ctx.measureText(txt).width; //获取文本宽度
+            var h = this.fontSize / 2;
+            var w2 = ctx.measureText(this.skill).width;
             ctx.fillStyle = this.textColor;
             ctx.fillText(txt, width / 2 - w / 2, height / 2 - h / 2);
             ctx.fillText(this.skill, width / 2 - w2 / 2, height / 2 + 3 * h / 2);
