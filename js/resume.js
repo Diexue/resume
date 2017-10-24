@@ -3,7 +3,7 @@ $(function() {
     // if ($(window).width() <= 755) {
     //     $(".mobile-nav").hide();
     // }
-    $('.more-nav').on('click', function() {
+    $('.more-nav').bind('click', function() {
         $(".nav-ul.nav-xs-ul").stop().slideToggle(300);
     })
     $('.nav-xs-ul li').click(function() {
