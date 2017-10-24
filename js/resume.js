@@ -19,7 +19,7 @@ $(function() {
 
 function fadeIn($element, direction) {
     var length = $($element).length + 1;
-    for (let i = 0; i <= length; i++) {
+    for (var i = 0; i <= length; i++) {
         $($element + ':nth-of-type(' + i + ')').css({
             'animation': direction + ' 1s forwards',
             'animation-delay': i * 0.1 + 's'

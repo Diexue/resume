@@ -34,6 +34,18 @@
     }
     $(window).on("scroll", Check);
 
+    function fadeIn($element, direction) {
+        var length = $($element).length + 1;
+        for (var i = 0; i <= length; i++) {
+            $($element + ':nth-of-type(' + i + ')').css({
+                'animation': direction + ' 1s forwards',
+                'animation-delay': i * 0.1 + 's'
+            })
+        }
+        setTimeout(function() {
+            $($element).removeClass("op0");
+        }, 1000);
+    }
 
     function Check() {
         var wst = $(window).scrollTop();
