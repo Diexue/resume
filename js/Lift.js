@@ -16,12 +16,12 @@
                 //         changeNum($numSet[a], parseInt($numSet[a].innerHTML))
                 //     }
                 // }
-                p1 = DrawProgress('h5', 'HTML5', 88, 5)
-                p2 = DrawProgress('c3', 'CSS3', 88, 5)
+                p1 = DrawProgress('h5', 'HTML5/CSS3', 88, 5)
                 p3 = DrawProgress('jq', 'jQuery', 80, 5)
                 p4 = DrawProgress('js', 'javascript', 78, 5)
                 p5 = DrawProgress('boot', 'Bootstrap', 85, 5)
-                p6 = DrawProgress('ng2', 'Angular2.0', 65, 5)
+                p2 = DrawProgress('node', 'nodejs', 52, 5)
+                p6 = DrawProgress('ng2', 'Angular2.0', 55, 5)
                 isFirst = false;
             }
         } else if (index == 2) {
