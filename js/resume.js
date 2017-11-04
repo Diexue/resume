@@ -19,7 +19,6 @@ function fadeIn($element, direction) {
             'animation-delay': i * 0.1 + 's'
         })
     }
-    console.log('$element', $element)
     setTimeout(function() {
         $($element).removeClass("op0");
     }, 1000);

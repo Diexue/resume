@@ -24,13 +24,6 @@
             fadeIn('.fadeRight', 'fadeInRight');
         } else if (index == 1) {
             fadeIn('.card', 'fadeInDown');
-            //$('.card').addClass('fadeDown');
-            // if (isFirst) {
-            //     fadeIn('.card', 'fadeInDown');
-            //     isFirst = false;
-            // }
-
-            //console.log('kk')
         }
         $('.section').eq(index).addClass("active");
         $('.section').eq(index).find('.fadeDown').css({ "animation": 'fadeInDown 1s forwards' })
