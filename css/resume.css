@@ -311,6 +311,9 @@ experience {
     /*box-sizing: border-box;*/
 }
 
+
+/*section2*/
+
 .status {
     box-sizing: border-box!important;
     padding: 0 10px;
@@ -321,17 +324,17 @@ experience {
     box-sizing: border-box;
     padding: 0 8px;
     position: relative;
+    cursor: pointer;
 }
 
 .card:hover {
-    transform: scale(1.1);
+    transform: scale(1.2);
     transition: all .5s;
 }
 
 .card_content {
     padding: 20px 0;
     box-sizing: border-box;
-    /*border: 1px solid #ccc;*/
     box-shadow: 2px 2px 5px #ccc;
     border-radius: 5px;
     margin-top: 15px;

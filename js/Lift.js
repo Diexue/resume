@@ -5,7 +5,8 @@
         var t = $(param.target[i]).offset().top;
         array.push(t);
     }
-    var isFirst = true;
+    var isFirst = true,
+        isDown = true;
     var $numSet = $('.num .gradeNum');
 
     function Selected(index) {
@@ -23,7 +24,16 @@
             fadeIn('.fadeLeft', 'fadeInLeft');
             fadeIn('.fadeRight', 'fadeInRight');
         } else if (index == 1) {
-            fadeIn('.card', 'fadeInDown');
+            if (isDown) {
+                if ($(window).width() < 768) {
+                    fadeIn('.card:nth-of-type(odd)', 'fadeInRight');
+                    fadeIn('.card:nth-of-type(even)', 'fadeInLeft')
+                } else {
+                    fadeIn('.card', 'fadeInDown');
+                }
+
+                isDown = false;
+            }
         }
         $('.section').eq(index).addClass("active");
         $('.section').eq(index).find('.fadeDown').css({ "animation": 'fadeInDown 1s forwards' })
@@ -34,9 +44,9 @@
     function fadeIn($element, direction) {
         var length = $($element).length + 1;
         for (var i = 0; i <= length; i++) {
-            $($element + ':nth-of-type(' + i + ')').css({
+            $($element + ':nth-of-type(' + (i + 1) + ')').css({
                 'animation': direction + ' 1s forwards',
-                'animation-delay': i * 0.1 + 's'
+                'animation-delay': i * 0.15 + 's'
             })
         }
         setTimeout(function() {
