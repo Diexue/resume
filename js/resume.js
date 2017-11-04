@@ -170,11 +170,4 @@ $(window).resize(function() {
     if (wid > 768) {
         $(".nav-xs-ul").hide();
     }
-    // if (wid > 755) {
-    //     console.log('wid', wid)
-    //     $(".nav-ul").show();
-    // } else {
-    //     console.log('wid', wid)
-    //     $(".mobile-nav").hide();
-    // }
 });
