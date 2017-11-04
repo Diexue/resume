@@ -11,7 +11,6 @@ $(function() {
     drawCanvas()
 })
 
-
 function fadeIn($element, direction) {
     var length = $($element).length + 1;
     for (var i = 0; i <= length; i++) {
@@ -20,6 +19,7 @@ function fadeIn($element, direction) {
             'animation-delay': i * 0.1 + 's'
         })
     }
+    console.log('$element', $element)
     setTimeout(function() {
         $($element).removeClass("op0");
     }, 1000);

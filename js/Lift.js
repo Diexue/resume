@@ -11,11 +11,6 @@
     function Selected(index) {
         if (index == 3) {
             if (isFirst) {
-                // for (var a in $numSet) {
-                //     if (typeof $numSet[a] == 'object' && $numSet[a].innerHTML != undefined) {
-                //         changeNum($numSet[a], parseInt($numSet[a].innerHTML))
-                //     }
-                // }
                 p1 = DrawProgress('h5', 'HTML5/CSS3', 88, 5)
                 p3 = DrawProgress('jq', 'jQuery', 80, 5)
                 p4 = DrawProgress('js', 'javascript', 78, 5)
@@ -27,6 +22,15 @@
         } else if (index == 2) {
             fadeIn('.fadeLeft', 'fadeInLeft');
             fadeIn('.fadeRight', 'fadeInRight');
+        } else if (index == 1) {
+            fadeIn('.card', 'fadeInDown');
+            //$('.card').addClass('fadeDown');
+            // if (isFirst) {
+            //     fadeIn('.card', 'fadeInDown');
+            //     isFirst = false;
+            // }
+
+            //console.log('kk')
         }
         $('.section').eq(index).addClass("active");
         $('.section').eq(index).find('.fadeDown').css({ "animation": 'fadeInDown 1s forwards' })
