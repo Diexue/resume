@@ -1,15 +1,10 @@
 $(function() {
     var $numSet = $('.num .gradeNum');
-    // if ($(window).width() <= 755) {
-    //     $(".mobile-nav").hide();
-    // }
     $('.more-nav').bind('click', function() {
         $(".nav-ul.nav-xs-ul").stop().slideToggle(300);
     })
     $('.nav-xs-ul li').click(function() {
-        // if ($(window).width() <= 755) {
         $(".nav-xs-ul").slideUp(300)
-            // }
     })
     $(".fades").addClass("fadesin");
     fadeIn('.fadeDown', 'fadeInDown');
@@ -29,21 +24,6 @@ function fadeIn($element, direction) {
         $($element).removeClass("op0");
     }, 1000);
 }
-
-// function DrawProgress(id, skill, deg, timer) {
-//     new Progress({
-//         el: id, //canvas元素id
-//         deg: deg, //绘制角度
-//         skill: skill, //文本内容
-//         timer: timer, //绘制时间
-//         lineWidth: 5, //线宽
-//         lineBgColor: '#e2e2e2', //底圆颜色
-//         lineColor: '#e4393c', //动态圆颜色
-//         textColor: '#000', //文本颜色
-//         fontSize: 20, //字体大小
-//         circleRadius: 100 //圆半径
-//     });
-// }
 
 function drawCanvas() {
     var canvas = document.getElementById("Mycanvas");
@@ -144,27 +124,6 @@ function drawCanvas() {
     }
 }
 
-function changeNum(element, value) {
-    var start = 0,
-        interval;
-    interval = setInterval(function() {
-        start++;
-        if (start >= value) {
-            $('.right').removeClass('w-0');
-            $('.circle').addClass('clip-auto');
-            clearInterval(interval);
-            start = value;
-        } else if (start > 50) {
-            $('.right').removeClass('w-0');
-            $('.circle').addClass('clip-auto');
-        }
-        $(element).parents('.num').prev().find('.left').css({
-            "transform": "rotate(" + (18 / 5) * start + "deg)"
-        })
-        $(element).text(start)
-    }, 30);
-
-}
 $(window).resize(function() {
     var wid = $(window).width();
     if (wid > 768) {
