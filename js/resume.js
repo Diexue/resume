@@ -123,6 +123,50 @@ function drawCanvas() {
     }
 }
 
+function drawProgress(id, skillText, grade, fontSize, timer) {
+    var canvas = document.getElementById(id);
+    var ctx = canvas.getContext('2d');
+    width = canvas.width;
+    height = canvas.height;
+    console.log('width', width, height)
+    grade > 0 && grade <= 100 ? grade = grade : grade = 100;
+    degActive = 0; //动态线条
+    lineWidth = 5; //线条宽度
+    lineBgColor = '#ccc'; //线条背景颜色
+    lineColor = "#ef5350"; //线条颜色
+    textColor = '#009ee5'; //文字颜色
+    circleRadius = width / 2 - lineWidth / 2;
+    fontSize !== undefined ? fontSize = fontSize : fontSize = parseInt(circleRadius / 2);
+    console.log('font', fontSize)
+        // fontSize = circleRadius / 2;
+    ctx.lineWidth = lineWidth;
+    var dep = grade / timer;
+    timer = setInterval(function() {
+        degActive += dep;
+        if (degActive >= grade / 100 * 360) {
+            clearInterval(timer);
+            timer = null;
+            degActive = grade / 100 * 360;
+        }
+        ctx.clearRect(0, 0, width, height); //清除画布
+        ctx.beginPath(); //绘制底圆
+        ctx.arc(width / 2, height / 2, circleRadius, 1, 8);
+        ctx.strokeStyle = lineBgColor;
+        ctx.stroke();
+        ctx.beginPath(); //绘制动态圆
+        ctx.arc(width / 2, height / 2, circleRadius, -Math.PI / 2, degActive * Math.PI / 180 - Math.PI / 2);
+        ctx.strokeStyle = lineColor;
+        ctx.stroke();
+        var txt = (parseInt(degActive * 100 / 360) + '%'); //获取百分比
+        ctx.font = fontSize + 'px SimHei';
+        var w = ctx.measureText(txt).width; //获取文本宽度
+        var h = fontSize / 2;
+        var w2 = ctx.measureText(skillText).width;
+        ctx.fillstyle = textColor;
+        ctx.fillText(txt, width / 2 - w / 2, height / 2 - h / 2);
+        ctx.fillText(skillText, width / 2 - w2 / 2, height / 2 + 3 * h / 2);
+    }, timer)
+}
 $(window).resize(function() {
     var wid = $(window).width();
     if (wid > 768) {

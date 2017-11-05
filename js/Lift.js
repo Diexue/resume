@@ -12,12 +12,12 @@
     function Selected(index) {
         if (index == 3) {
             if (isFirst) {
-                p1 = DrawProgress('h5', 'HTML5/CSS3', 88, 5)
-                p3 = DrawProgress('jq', 'jQuery', 80, 5)
-                p4 = DrawProgress('js', 'javascript', 78, 5)
-                p5 = DrawProgress('boot', 'Bootstrap', 85, 5)
-                p2 = DrawProgress('node', 'nodejs', 52, 5)
-                p6 = DrawProgress('ng2', 'Angular2.0', 55, 5)
+                p1 = drawProgress('h5', 'HTML5/CSS3', 88, 18, 20)
+                p3 = drawProgress('jq', 'jQuery', 80, 18, 20)
+                p4 = drawProgress('js', 'javascript', 78, 18, 20)
+                p5 = drawProgress('boot', 'Bootstrap', 85, 18, 20)
+                p2 = drawProgress('node', 'nodejs', 52, 18, 20)
+                p6 = drawProgress('ng2', 'Angular2.0', 55, 18, 20)
                 isFirst = false;
             }
         } else if (index == 2) {
@@ -52,21 +52,6 @@
         setTimeout(function() {
             $($element).removeClass("op0");
         }, 1000);
-    }
-
-    function DrawProgress(id, skill, deg, timer) {
-        new Progress({
-            el: id, //canvas元素id
-            deg: deg, //绘制角度
-            skill: skill, //文本内容
-            timer: timer, //绘制时间
-            lineWidth: 5, //线宽
-            lineBgColor: '#e2e2e2', //底圆颜色
-            lineColor: '#e4393c', //动态圆颜色
-            textColor: '#000', //文本颜色
-            fontSize: 20, //字体大小
-            circleRadius: 100 //圆半径
-        });
     }
 
     function Check() {

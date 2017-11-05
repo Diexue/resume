@@ -15,8 +15,8 @@ Progress.prototype = {
             height = 120,
             degActive = 0, //动态线条
             timer = null; //定时器
-        console.log('h w', this.el, this.skill, width, height)
-            //停止时的角度
+        //console.log('h w', this.el, this.skill, width, height)
+        //停止时的角度
         init.deg > 0 && init.deg <= 100 ?
             this.deg = init.deg : this.deg = 100;
 
@@ -86,9 +86,10 @@ Progress.prototype = {
                 timer = null;
                 degActive = this.deg / 100 * 360
             }
-            //degActive++;
+            degActive++;
 
-            degActive += (this.deg / this.timer);
+            // degActive += (this.deg / this.timer);
+            // degActive += 20;
         }.bind(this), this.timer);
     }
 };
