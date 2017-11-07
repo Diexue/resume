@@ -13,9 +13,9 @@
         if (index == 3) {
             if (isFirst) {
                 p1 = drawProgress('h5', 'HTML5/CSS3', 88, 18, 20)
-                p3 = drawProgress('jq', 'jQuery', 80, 18, 20)
+                p3 = drawProgress('jq', 'jQuery', 85, 18, 20)
                 p4 = drawProgress('js', 'javascript', 78, 18, 20)
-                p5 = drawProgress('boot', 'Bootstrap', 85, 18, 20)
+                p5 = drawProgress('boot', 'Bootstrap', 82, 18, 20)
                 p2 = drawProgress('node', 'nodejs', 52, 18, 20)
                 p6 = drawProgress('ng2', 'Angular2.0', 55, 18, 20)
                 isFirst = false;
