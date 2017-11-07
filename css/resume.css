@@ -210,7 +210,7 @@ experience {
 }
 
 .experience:before {
-    top: 250px;
+    top: 210px;
     bottom: 0;
     position: absolute;
     content: " ";
