@@ -110,7 +110,7 @@ function drawCanvas() {
                     // 画线
                     ctx.beginPath();
                     ctx.lineWidth = ratio / 2;
-                    ctx.strokeStyle = 'rgba(0,0,0,' + (ratio + 0.2) + ')';
+                    ctx.strokeStyle = 'rgba(117,120,130,' + (ratio + 0.2) + ')';
                     ctx.moveTo(dot.x, dot.y);
                     ctx.lineTo(d2.x, d2.y);
                     ctx.stroke();
