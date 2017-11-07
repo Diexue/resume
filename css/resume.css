@@ -93,6 +93,10 @@ a {
     position: relative;
     padding-bottom: 20px;
     min-height: 700px;
+    background: -webkit-linear-gradient(left, rgba(170, 204, 238, 0.3), rgba(255, 153, 102, 0.3));
+    background: -o-linear-gradient(left, rgba(170, 204, 238, 0.3), rgba(255, 153, 102, 0.3));
+    background: -moz-linear-gradient(left, rgba(170, 204, 238, 0.3), rgba(255, 153, 102, 0.3));
+    background: linear-gradient(to left, rgba(170, 204, 238, 0.3), rgba(255, 153, 102, 0.3));
 }
 
 .section h2 {
